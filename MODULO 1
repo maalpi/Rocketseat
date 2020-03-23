@@ -13,3 +13,65 @@
 var x = dados();
 console.log(x);
             
+
+//EXERCICIO 2
+function pares(x, y) {
+                for(var i = x; i<=y; i++){
+                    if ((i % 2) == 0){
+                        console.log(i);
+                    }
+                }
+            }
+pares(32, 321);
+
+
+//EXERCICIO 3
+function temHabilidade(skills) {
+                var posicao = skills.indexOf('Javascript');
+                if (posicao === -1){
+                    console.log(false);
+                }else{
+                    console.log(true);
+                }
+
+            }
+var skills = ["Javascript", "ReactJS", "React Native"];
+temHabilidade(skills); // true ou false
+  
+  
+//EXERCICIO 4
+function experiencia(anos) {
+            if (anos < 0){
+               return('ERRO');
+            }else if (anos<=1){
+                return('Iniciante');
+            }else if (anos>1 && anos<=3){
+                return('Intermediario');
+            }else if(anos >3 && anos<=6){
+                return('Avancado');
+            }else{
+                return('Jedi Master');
+            }
+            }
+
+var anosEstudo = 7;
+console.log(experiencia(anosEstudo));
+            
+//EXERCICIO 5
+function habilidades(user){
+                for (user of user){
+                    console.log("O " + user.nome + " possui as habilidades: " + user.habilidades.join(", "));
+                } 
+            }
+
+var usuarios = [{
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+             },
+            {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+            
+habilidades(usuarios);
